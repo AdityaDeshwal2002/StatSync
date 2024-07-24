@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/customerNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#B5C0E3"
+        android:hint="Customer name"
+        android:padding="12dp">
+
+    </EditText>
+    <EditText
+        android:id="@+id/ageNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customerNameEditText"
+        android:layout_marginTop="12dp"
+        android:hint="Age"
+        android:padding="12dp"
+        android:background="#b5c0e3"
+        android:inputType="number">
+    </EditText>
+
+    <Switch
+        android:id="@+id/customerActiveSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageNumberEditText"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="Customer Active "
+        tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    </Switch>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customerActiveSwitch"
+        android:layout_marginTop="12dp"
+        android:text="View"
+        android:textAllCaps="false">
+
+    </com.google.android.material.button.MaterialButton>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:layout_below="@id/customerActiveSwitch"
+        android:layout_toRightOf="@id/viewButton"
+        android:layout_marginLeft="120dp">
+    </com.google.android.material.button.MaterialButton>
+
+    <ListView
+        android:id="@+id/lv_customerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addButton"
+        tools:listitem="">
+
+    </ListView>
+
+
+
+</RelativeLayout>
